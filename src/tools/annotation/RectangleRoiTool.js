@@ -14,6 +14,7 @@ import {
   drawRect,
   drawLinkedTextBox,
   setShadow,
+  drawTextBox,
 } from './../../drawing/index.js';
 
 // Util
@@ -258,6 +259,23 @@ export default class RectangleRoiTool extends BaseAnnotationTool {
           10,
           true
         );
+
+        const startCanvas = external.cornerstone.pixelToCanvas(
+          element,
+          data.handles.start
+        );
+
+        data.boxNumber = '1 432sa dasd adsa';
+        if (data.boxNumber) {
+          drawTextBox(
+            context,
+            data.boxNumber,
+            startCanvas.x,
+            startCanvas.y - 26,
+            color,
+            {}
+          );
+        }
       }
     });
   }
