@@ -82,7 +82,7 @@ export default class RectangleRoiTool extends BaseAnnotationTool {
           x: eventData.currentPoints.image.x,
           y: eventData.currentPoints.image.y,
           highlight: true,
-          active: true,
+          active: false,
         },
         initialRotation: eventData.viewport.rotation,
         textBox: {
